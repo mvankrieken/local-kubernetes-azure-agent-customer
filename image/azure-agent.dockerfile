@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND="noninteractive"
 # Install defaults
 RUN apt update &&\
     apt upgrade -y &&\
-    apt install -y curl libicu70 software-properties-common git
+    apt install -y curl libicu70 software-properties-common git jq
 
 # Install tools
 COPY ./build-tools.sh ./
