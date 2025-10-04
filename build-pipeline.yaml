@@ -49,7 +49,7 @@ steps:
     git branch -v -a
     git checkout -b main
     git branch -v -a
-    yq eval -i '.image.tag = "local/az-local-agent-customer:$(GIT_SHORT_ID)"' azure-customer-agent/values.yaml
+    yq eval -i '.image.tag = "$(GIT_SHORT_ID)"' azure-customer-agent/values.yaml
     git add .
     git commit -m "New version for azure-customer-agent/values.yaml"
     git push origin main
